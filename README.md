@@ -1,17 +1,20 @@
 <p align="center">
-  <h1 align="center">VXG Media SDK for Flutter</h1>
+  <a href="https://www.videoexpertsgroup.com/mobile/">
+    <img width="250px" src="resources/vxg.png"><br/>
+  </a>
+  <h1 align="center">VXG Media SDK for Flutter </h1>
 </p>
 
 ---
 
-[[Documentation]](https://www.videoexpertsgroup.com) • [[Changelog]](./CHANGELOG.md) • [[Packages]](https://pub.dev/publishers/vxg.io/packages)
+[[Documentation]](https://www.videoexpertsgroup.com/mobile/) • [[Changelog]](./CHANGELOG.md) • [[Packages]](https://pub.dev/publishers/vxg.io/packages)
 
 ---
 
 VXG Media SDK for Flutter is a set of [Flutter plugins](https://flutter.io/platform-plugins/)
-that enable Flutter apps to use [VXG Media SDK for Flutter](https://www.videoexpertsgroup.com/) services. You can follow an example that shows
+that enable Flutter apps to use [VXG Media SDK for Flutter](https://www.videoexpertsgroup.com/mobile/) services. You can follow an example that shows
 how to use these plugins in
-the [VXG Media SDK for Flutter](https://www.videoexpertsgroup.com) codelab.
+the [VXG Media SDK for Flutter](https://www.videoexpertsgroup.com/mobile/) codelab.
 
 [Flutter](https://flutter.dev) is Google’s UI toolkit for building beautiful, natively compiled applications for mobile,
 web, and desktop from a single codebase. Flutter is used by developers and organizations around the world, and is free
@@ -21,7 +24,7 @@ and open source.
 
 ## Disclaimer
 This is a non-commercial version of VXG Media SDK for Flutter. Playback is limited to 2 minutes.
-Commercial use and access to extra features requires a license. Learn more about <a href="https://www.videoexpertsgroup.com">VXG RTSP SDK.</a>
+Commercial use and access to extra features requires a license. Learn more about <a href="https://www.videoexpertsgroup.com/mobile/">VXG RTSP SDK.</a>
 
 ## About SDK
 SDK consists of three modules:

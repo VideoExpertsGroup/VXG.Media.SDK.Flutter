@@ -1,18 +1,18 @@
-[<img src="https://raw.githubusercontent.com/VideoExpertsGroup/VXG.Media.SDK.Flutter/master/resources/vxg.png" width="200" />](https://www.videoexpertsgroup.com/)
+[<img src="https://raw.githubusercontent.com/VideoExpertsGroup/VXG.Media.SDK.Flutter/master/resources/vxg.png" width="200" />](https://www.videoexpertsgroup.com/mobile/)
 
 # VXG Player SDK for Flutter
 
 A Flutter plugin to use the VXG Player SDK, which enables playback of media files and streams for your apps.
 
-To learn more about VXG Player SDK, please visit the [VXG Player SDK website](https://www.videoexpertsgroup.com/)
+To learn more about VXG Player SDK, please visit the [VXG Player SDK website](https://www.videoexpertsgroup.com/mobile/)
 
 ## Getting Started
 
-To get started with VXG Player SDK, please [see the documentation](https://www.videoexpertsgroup.com/).
+To get started with VXG Player SDK, please [see the documentation](https://www.videoexpertsgroup.com/mobile/).
 
 ## Usage
 
-To use this plugin, please visit the [Core Usage documentation](https://www.videoexpertsgroup.com/)
+To use this plugin, please visit the [Core Usage documentation](https://www.videoexpertsgroup.com/mobile/)
 
 ## Issues and feedback
 
