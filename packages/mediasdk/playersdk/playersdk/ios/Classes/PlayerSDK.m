@@ -1,6 +1,6 @@
 #import "PlayerSDK.h"
-#import "../xcframeworks/MediaPlayerSDK.xcframework/ios-arm64_arm64e_armv7_armv7s/MediaPlayerSDK.framework/Headers/MediaPlayer.h"
-#import "../xcframeworks/MediaPlayerSDK.xcframework/ios-arm64_arm64e_armv7_armv7s/MediaPlayerSDK.framework/Headers/MediaPlayerConfig.h"
+#import "../xcframeworks/MediaPlayerSDK.xcframework/ios-arm64_armv7/MediaPlayerSDK.framework/Headers/MediaPlayer.h"
+#import "../xcframeworks/MediaPlayerSDK.xcframework/ios-arm64_armv7/MediaPlayerSDK.framework/Headers/MediaPlayerConfig.h"
 
 @implementation PlayerSDKFactory {
     NSObject<FlutterBinaryMessenger>* _messenger;
