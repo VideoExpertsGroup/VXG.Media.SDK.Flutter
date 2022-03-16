@@ -16,7 +16,7 @@ To use this plugin, please visit the [Core Usage documentation](https://www.vide
 
 ## Issues and feedback
 
-Please file FlutterFire specific issues, bugs, or feature requests in our [issue tracker](https://github.com/VideoExpertsGroup/VXG.Media.SDK.Flutter/issues/new).
+Please file VXG Player SDK for Flutter specific issues, bugs, or feature requests in our [issue tracker](https://github.com/VideoExpertsGroup/VXG.Media.SDK.Flutter/issues/new).
 
 Plugin issues that are not specific to Flutterfire can be filed in the [Flutter issue tracker](https://github.com/flutter/flutter/issues/new).
 
