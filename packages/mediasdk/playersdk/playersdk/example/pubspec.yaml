@@ -1,5 +1,6 @@
 name: com_vxg_plugin_playersdk_example
 description: Demonstrates how to use the VXG Player SDK plugin.
+version: 0.0.1+1
 
 environment:
   sdk: ">=2.13.0 <3.0.0"
