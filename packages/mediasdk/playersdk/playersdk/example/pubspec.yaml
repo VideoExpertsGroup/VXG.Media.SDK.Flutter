@@ -1,0 +1,21 @@
+name: com_vxg_plugin_playersdk_example
+description: Demonstrates how to use the VXG Player SDK plugin.
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  com_vxg_plugin_playersdk:
+    path: ../
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
