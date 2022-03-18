@@ -1,4 +1,4 @@
-package com.vxg.plugin.playersdk;
+package vxg.playersdk;
 
 //import android.annotation.SuppressLint;
 //import android.content.Context;

@@ -1,11 +1,11 @@
-package com.vxg.plugin.playersdk
+package vxg.playersdk
 
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
-import com.vxg.plugin.playersdk.PlayerSDKFactory
+import vxg.playersdk.PlayerSDKFactory
 
 import android.app.Activity
 

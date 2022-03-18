@@ -3,7 +3,7 @@ import UIKit
 
 public class SwiftPlayerSDKPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "com_vxg_plugin_playersdk", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "vxg_playersdk", binaryMessenger: registrar.messenger())
     let instance = SwiftPlayerSDKPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }

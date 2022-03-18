@@ -2,8 +2,8 @@
 
 
 import 'dart:async';
-import 'package:com_vxg_plugin_playersdk/playersdkcommon.dart';
-import 'package:com_vxg_plugin_playersdk/playersdkconfig.dart';
+import 'package:vxg_playersdk/playersdkcommon.dart';
+import 'package:vxg_playersdk/playersdkconfig.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
@@ -207,9 +207,6 @@ class NativePlayerSDKViewState extends State<PlayerSDKView> {
             ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
             ..addOnPlatformViewCreatedListener((int id) {
               print('TestPlugin: _NativePlayerSDKViewState: addOnPlatformViewCreatedListener');
-              if (onPlatformViewCreated == null) {
-                return;
-              }
               onPlatformViewCreated(id);
             })
             ..create();
@@ -229,9 +226,6 @@ class NativePlayerSDKViewState extends State<PlayerSDKView> {
 
   Future<void> onPlatformViewCreated(id) async {
     print('TestPlugin: _NativePlayerSDKViewState: onPlatformViewCreated');
-    if (widget.onPlayerSDKViewCreated == null) {
-      return;
-    }
     controller = new PlayerSDKViewController.init(id);
     widget.onPlayerSDKViewCreated(controller);
   }

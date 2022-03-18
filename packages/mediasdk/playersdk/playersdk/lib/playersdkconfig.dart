@@ -1,7 +1,5 @@
 
-import 'dart:ffi';
-
-import 'package:com_vxg_plugin_playersdk/playersdkcommon.dart';
+import 'package:vxg_playersdk/playersdkcommon.dart';
 
 class PlayerSDKConfig {
   PlayerSDKContentProviderLibraryType contentProviderLibrary = PlayerSDKContentProviderLibraryType.LIBMEDIA; // 0 - ffmpeg source, 1 - RTSTM source, 2 - WEBRTC source

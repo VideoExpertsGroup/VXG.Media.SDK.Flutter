@@ -6,11 +6,11 @@ abstract class _EnumWithParam1Base<V> {
   const _EnumWithParam1Base(this.value);
 }
 
-abstract class _EnumWithParam2Base<V, T> {
-  V value;
-  T param1;
-  _EnumWithParam2Base(this.value, this.param1);
-}
+// abstract class _EnumWithParam2Base<V, T> {
+//   V value;
+//   T param1;
+//   _EnumWithParam2Base(this.value, this.param1);
+// }
 
 class PlayerSDKContentProviderLibraryType extends _EnumWithParam1Base<int> {
   const PlayerSDKContentProviderLibraryType(int value) : super(value);

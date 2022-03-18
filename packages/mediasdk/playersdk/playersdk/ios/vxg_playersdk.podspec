@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = 'com_vxg_plugin_playersdk'
+  s.name             = 'vxg_playersdk'
   s.version          = '0.0.1'
   s.summary          = 'VXG Player SDK for Flutter plugin'
   s.description      = <<-DESC

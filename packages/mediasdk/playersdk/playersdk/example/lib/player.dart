@@ -1,6 +1,6 @@
-import 'package:com_vxg_plugin_playersdk/playersdk.dart';
-import 'package:com_vxg_plugin_playersdk/playersdkcommon.dart';
-import 'package:com_vxg_plugin_playersdk/playersdkconfig.dart';
+import 'package:vxg_playersdk/playersdk.dart';
+import 'package:vxg_playersdk/playersdkcommon.dart';
+import 'package:vxg_playersdk/playersdkconfig.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:io' show Platform;
@@ -62,14 +62,14 @@ class _PlayerViewState extends State<PlayerView> with WidgetsBindingObserver {
                 var delta = (details.timeStamp - _lastPointerDown);
                 _isTouchDouble = (delta.inMilliseconds <= 300);
                 _lastPointerDown = details.timeStamp;
-                print('TestPlugin: _PlayerViewState: Listener: onPointerDown: ${details.timeStamp.toString()}, delta: ${delta.inMilliseconds}, _isTouchDouble: ${_isTouchDouble}');
+                print('TestPlugin: _PlayerViewState: Listener: onPointerDown: ${details.timeStamp.toString()}, delta: ${delta.inMilliseconds}, _isTouchDouble: $_isTouchDouble');
               },
               onPointerUp: (PointerEvent details) {
                 print('TestPlugin: _PlayerViewState: Listener: onPointerUp: ${details.timeStamp.toString()}');
                 if (!_isTouchDouble) {
                   Future.delayed(const Duration(milliseconds: 300), () {
                     setState(() {
-                      print('TestPlugin: _PlayerViewState: Listener: onPointerUp: handle: _isTouchDouble: ${_isTouchDouble}');
+                      print('TestPlugin: _PlayerViewState: Listener: onPointerUp: handle: _isTouchDouble: $_isTouchDouble');
                       if (!_isTouchMoved && !_isTouchDouble) {
                         _isControlsVisible = !_isControlsVisible;
                       }
@@ -186,14 +186,14 @@ class _PlayerViewState extends State<PlayerView> with WidgetsBindingObserver {
                         var delta = (details.timeStamp - _lastPointerDown);
                         _isTouchDouble = (delta.inMilliseconds <= 300);
                         _lastPointerDown = details.timeStamp;
-                        print('TestPlugin: _PlayerViewState: Listener: onPointerDown: ${details.timeStamp.toString()}, delta: ${delta.inMilliseconds}, _isTouchDouble: ${_isTouchDouble}');
+                        print('TestPlugin: _PlayerViewState: Listener: onPointerDown: ${details.timeStamp.toString()}, delta: ${delta.inMilliseconds}, _isTouchDouble: $_isTouchDouble');
                       },
                       onPointerUp: (PointerEvent details) {
                         print('TestPlugin: _PlayerViewState: Listener: onPointerUp: ${details.timeStamp.toString()}');
                         if (!_isTouchDouble) {
                           Future.delayed(const Duration(milliseconds: 300), () {
                             setState(() {
-                              print('TestPlugin: _PlayerViewState: Listener: onPointerUp: handle: _isTouchDouble: ${_isTouchDouble}');
+                              print('TestPlugin: _PlayerViewState: Listener: onPointerUp: handle: _isTouchDouble: $_isTouchDouble');
                               if (!_isTouchMoved && !_isTouchDouble) {
                                 _isControlsVisible = !_isControlsVisible;
                               }

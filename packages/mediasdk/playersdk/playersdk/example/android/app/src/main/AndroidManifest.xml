@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vxg.plugin.playersdk.example">
+    package="vxg.playersdk.example">
    <application
-        android:label="com.vxg.plugin.playersdk.example"
+        android:label="vxg.playersdk.example"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

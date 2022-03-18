@@ -1,4 +1,4 @@
-package com.vxg.plugin.playersdk;
+package vxg.playersdk;
 
 //import android.content.Context;
 //import io.flutter.plugin.common.StandardMessageCodec;

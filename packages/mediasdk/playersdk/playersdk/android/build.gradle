@@ -1,4 +1,4 @@
-group 'com.vxg.plugin.playersdk'
+group 'vxg.playersdk'
 version '1.0-SNAPSHOT'
 
 buildscript {

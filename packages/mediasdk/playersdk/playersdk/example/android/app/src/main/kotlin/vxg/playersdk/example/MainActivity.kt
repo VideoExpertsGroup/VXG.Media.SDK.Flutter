@@ -1,4 +1,4 @@
-package com.vxg.plugin.playersdk.example
+package vxg.playersdk.example
 
 import io.flutter.embedding.android.FlutterActivity
 
