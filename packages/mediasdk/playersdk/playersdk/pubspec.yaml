@@ -2,7 +2,7 @@ name: vxg_playersdk
 description: Flutter plugin to use the VXG Player SDK, which enables playback of media files and streams for your apps.
 homepage: https://www.videoexpertsgroup.com/
 repository: https://github.com/VideoExpertsGroup/VXG.Media.SDK.Flutter/tree/master/packages/mediasdk/playersdk/playersdk
-version: 0.0.1+1
+version: 0.0.2
 
 false_secrets:
   - example/**

@@ -47,7 +47,6 @@ class _PlayerViewState extends State<PlayerView> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -82,14 +81,9 @@ class _PlayerViewState extends State<PlayerView> with WidgetsBindingObserver {
               child: Stack(
                 children: <Widget>[
                   playersdk!,
-                  //CloudPlayerView(onCloudPlayerViewCreated, onCloudPlayerViewAttached),
-                  // Container(
-                  //   color: Colors.transparent,
-                  //   child: PlayerContainer(key: _key2),
-                  // ),
                   Container(
                     color: Colors.transparent,
-                    constraints: _isControlsVisible ? const BoxConstraints.expand(height: kToolbarHeight) : const BoxConstraints.expand(height: 0.0), // ← this guy
+                    constraints: _isControlsVisible ? const BoxConstraints.expand(height: kToolbarHeight * 2) : const BoxConstraints.expand(height: 0.0), // ← this guy
                     child: IgnorePointer(
                       ignoring: !_isControlsVisible,
                       child: AnimatedOpacity(
@@ -113,29 +107,6 @@ class _PlayerViewState extends State<PlayerView> with WidgetsBindingObserver {
                           ),
                         ),
                       ),
-                      // child: AnimatedOpacity(
-                      //   opacity: _isControlsVisible ? 1.0 : 0.0,
-                      //   duration: const Duration(milliseconds: 300),
-                      //   child: AppBar(
-                      //     backgroundColor: Colors.transparent,
-                      //     elevation: 0.0,
-                      //     titleSpacing: 10.0,
-                      //     title: const Text("VXG"),
-                      //     centerTitle: true,
-                      //     bottomOpacity: _isControlsVisible ? 1.0 : 0.0,
-                      //     toolbarOpacity: _isControlsVisible ? 1.0 : 0.0,
-                      //     leading: InkWell(
-                      //       onTap: () {
-                      //         this.controller!.close();
-                      //       },
-                      //       child: const Icon(
-                      //         Icons.arrow_back_ios,
-                      //         color: Colors.white,
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
-
                     ),
                   ),
                 ],
@@ -175,78 +146,20 @@ class _PlayerViewState extends State<PlayerView> with WidgetsBindingObserver {
                           ),
                         )
                     ),
-                  if (Platform.isIOS)
-                    Listener(
-                      onPointerMove: (PointerEvent details) {
-                        print('TestPlugin: _PlayerViewState: Listener: onPointerMove: ${details.timeStamp.toString()}');
-                        _isTouchMoved = true;
-                      },
-                      onPointerDown: (PointerEvent details) {
-                        _isTouchMoved = false;
-                        var delta = (details.timeStamp - _lastPointerDown);
-                        _isTouchDouble = (delta.inMilliseconds <= 300);
-                        _lastPointerDown = details.timeStamp;
-                        print('TestPlugin: _PlayerViewState: Listener: onPointerDown: ${details.timeStamp.toString()}, delta: ${delta.inMilliseconds}, _isTouchDouble: $_isTouchDouble');
-                      },
-                      onPointerUp: (PointerEvent details) {
-                        print('TestPlugin: _PlayerViewState: Listener: onPointerUp: ${details.timeStamp.toString()}');
-                        if (!_isTouchDouble) {
-                          Future.delayed(const Duration(milliseconds: 300), () {
-                            setState(() {
-                              print('TestPlugin: _PlayerViewState: Listener: onPointerUp: handle: _isTouchDouble: $_isTouchDouble');
-                              if (!_isTouchMoved && !_isTouchDouble) {
-                                _isControlsVisible = !_isControlsVisible;
-                              }
-                              _isTouchMoved = false;
-                              _isTouchDouble = false;
-                            });
-                          });
-                        }
-                      },
-                      child: Container(
-                        color: Colors.transparent,
-                        constraints: _isControlsVisible ? const BoxConstraints.expand(height: kToolbarHeight) : const BoxConstraints.expand(height: 0.0), // ← this guy
-                        child: IgnorePointer(
-                          ignoring: !_isControlsVisible,
-                          child: AnimatedOpacity(
-                            opacity: _isControlsVisible ? 1.0 : 0.0,
-                            duration: Duration(milliseconds: 300),
-                            child: AppBar(
-                              backgroundColor: Colors.transparent,
-                              elevation: 0.0,
-                              titleSpacing: 10.0,
-                              title: Text("VXG PlayerSDK Test"),
-                              centerTitle: true,
-                              leading: InkWell(
-                                onTap: () {
-                                  this.controller!.close();
-                                  Navigator.pop(context);
-                                },
-                                child: Icon(
-                                  Icons.arrow_back_ios,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                  GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTap: () {
+                      setState(() {
+                        _isControlsVisible = !_isControlsVisible;
+                      });
+                    },
+                    onDoubleTap: () {
+                      this.controller!.handleDoubleTap();
+                    },
+                    child: Container(
+                        color: Colors.transparent
                     ),
-                  if (Platform.isAndroid)
-                    GestureDetector(
-                      behavior: HitTestBehavior.translucent,
-                      onTap: () {
-                        setState(() {
-                          _isControlsVisible = !_isControlsVisible;
-                        });
-                      },
-                      onDoubleTap: () {
-                        this.controller!.handleDoubleTap();
-                      },
-                      child: Container(
-                          color: Colors.transparent
-                      ),
-                  ),
+                ),
                 ],
               ),
             ),
@@ -424,8 +337,6 @@ class _PlayerViewState extends State<PlayerView> with WidgetsBindingObserver {
 
     this.controller?.handleTouchEnd(x, y);
   }
-
-
 
   void showProgress(bool show) {
     isLoading = show;
