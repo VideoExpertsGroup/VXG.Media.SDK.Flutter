@@ -8,11 +8,11 @@ To learn more about VXG Player SDK, please visit the [VXG Player SDK website](ht
 
 ## Getting Started
 
-To get started with VXG Player SDK, please [see the documentation](https://www.videoexpertsgroup.com/mobile/).
+To get started with VXG Player SDK, please [see the documentation](https://pub.dev/documentation/vxg_playersdk/latest/).
 
 ## Usage
 
-To use this plugin, please visit the [Core Usage documentation](https://www.videoexpertsgroup.com/mobile/)
+To use this plugin, please visit the [Core Usage documentation](https://pub.dev/documentation/vxg_playersdk/latest/)
 
 ## Issues and feedback
 
